@@ -21,5 +21,7 @@ app.get('/',(request,response) => {
     response.render('main')
 })
 
+app.use('/',require('./server/router/router'))
+
 app.listen(3000,() => console.log('Server is started on port 3000'))
 
