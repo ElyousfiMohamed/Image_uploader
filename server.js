@@ -22,6 +22,6 @@ app.get('/',(request,response) => {
 })
 
 app.use('/',require('./server/router/router'))
-
+app.use('/uploadmultiple',require('./server/router/router'))
 app.listen(3000,() => console.log('Server is started on port 3000'))
 
