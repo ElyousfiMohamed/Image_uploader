@@ -1,3 +1,5 @@
+const res = require("express/lib/response")
+
 exports.home = (request,response) => {
     response.render('main')
 }
@@ -10,6 +12,6 @@ exports.uploads = (request,response,next) => {
         error.httpStatusCode = 400;
         return next(error)
     }
-    console.log("Error")
+
     response.json(files)
 }
