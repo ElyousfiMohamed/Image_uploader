@@ -1,0 +1,37 @@
+<section class="section my-4">
+    <div class="container text-center">
+        <div class="title py-2">
+            <h1>Node File Uploader</h1>
+            <p class="subtitle">Upload Images to the <b>Server</b></p>
+        </div>
+
+        <div class="row justify-content-center">
+            <div class="col-4">
+                <form action="/uploadmultiple" enctype="multipart/form-data">
+                    <div class="row">
+                        <div class="col-8">
+                            <input type="file" class="form-control" name="images" id="formFile" multiple>
+                        </div>
+                        <div class="col-2">
+                            <input type="submit" class="btn btn-success" value="Upload images">
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <section class="mt-5">
+            <div class="row">
+                <div class="col-3">
+                    <div class="card shadow" style="width: 18rem;">
+                    <img class="card-img-top img-fluid" src="..." alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title font-poppins">Image</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+</section>
