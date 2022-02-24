@@ -1,8 +1,9 @@
 const UploadModel = require('../schema/schema');
 const fs = require("fs")
 
-exports.home = (request,response) => {
-    response.render('main')
+exports.home = async (request,response) => {
+    const imagesDb = await UploadModel.find()
+    response.render('main',{images:imagesDb})
 }
 
 exports.uploads = (req,res,next) => {

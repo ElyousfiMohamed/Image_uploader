@@ -1,4 +1,5 @@
 const express = require('express')
+const controller = require('./server/controller/controller')
 const app = express()
 
 const hbs = require('express-handlebars')
@@ -18,12 +19,8 @@ app.engine('hbs',hbs.engine({
     partialsDir: path.join(__dirname,'views/partials')
 }))
 
-//routes 
-app.get('/',(request,response) => {
-    response.render('main')
-})
 
 app.use('/',require('./server/router/router'))
-app.use('/uploadmultiple',require('./server/router/router'))
+
 app.listen(3000,() => console.log('Server is started on port 3000'))
 
