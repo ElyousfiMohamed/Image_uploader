@@ -1,5 +1,5 @@
 const route = require('express').Router()
-const controller = require('./controller/controller')
+const controller = require('../controller/controller')
 const store = require('../middleware/multer')
 
 route.get('/',controller.home)
